@@ -1,0 +1,123 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tablePlan {
+    height: 600px;
+    width: 800px;
+    position: relative;
+    border: 2px solid black;
+    background-color: #f9f9f9;
+    gap: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.smallTable {
+    position: absolute;
+    width: 70px;
+    height: 100px;
+    border: 1px solid black;
+}
+.bigTable {
+    position: absolute;
+    width: 120px;
+    height: 170px;
+    border: 1px solid black;
+}
+.tableOne {
+    position: absolute;
+    transform: rotate(90deg);
+    margin-left: 30px;
+}
+.tableTwo {
+    position: absolute;
+    left: 15px;
+    top: 110px;
+}
+.tableThree {
+    position: absolute;
+    left: 15px;
+    top: 310px;
+}
+
+.tableFour {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 30px;
+    top: 490px;
+}
+.tableFive {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 200px;
+    top: 490px;
+    flex: auto;
+}
+.tableSix {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 320px;
+    top: 490px;
+    flex: auto;
+}
+.tableSeven {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 440px;
+    top: 490px;
+    flex: auto;
+}
+.tableEight {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 560px;
+    top: 490px;
+    flex: auto;
+}
+.tableNine {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 450px;
+    top: 290px;
+    flex: auto;
+}
+.tableTen {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 250px;
+    top: 290px;
+    flex: auto;
+}
+
+.tableEleven {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 250px;
+    top: 130px;
+    flex: auto;
+}
+.tableTwelve {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 450px;
+    top: 130px;
+    flex: auto;
+}
+.tableOne:hover, .tableOne:focus, .tableTwo:hover, .tableTwo:focus, .tableThree:hover, .tableThree:focus,
+.tableFour:hover, .tableFour:focus, .tableFive:hover, .tableFive:focus, .tableSix:hover, .tableSix:focus,
+.tableSeven:hover, .tableSeven:focus, .tableEight:hover, .tableEight:focus, .tableNine:hover, .tableNine:focus,
+.tableTen:hover, .tableTen:focus, .tableEleven:hover, .tableEleven:focus, .tableTwelve:hover, .tableTwelve:focus{
+    background-color: cornflowerblue;
+}
+
+.tableInfo {
+    width: 350px;
+    height: 480px;
+    top: 40px;
+    position: relative;
+}
+.tableContainer {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}

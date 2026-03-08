@@ -1,0 +1,28 @@
+{
+  "properties": [
+    {
+      "name": "spring.thymeleaf.prefix",
+      "type": "java.lang.String",
+      "description": "Description for spring.thymeleaf.prefix."
+    },
+    {
+      "name": "spring.thymeleaf.suffix",
+      "type": "java.lang.String",
+      "description": "Description for spring.thymeleaf.suffix."
+    },
+    {
+      "name": "spring.thymeleaf.enabled",
+      "type": "java.lang.String",
+      "description": "Description for spring.thymeleaf.enabled."
+    },
+    {
+      "name": "spring.devtools.restart.enabled",
+      "type": "java.lang.String",
+      "description": "Description for spring.devtools.restart.enabled."
+    },
+    {
+      "name": "spring.devtools.livereload.enabled",
+      "type": "java.lang.String",
+      "description": "Description for spring.devtools.livereload.enabled."
+    }
+  ] }

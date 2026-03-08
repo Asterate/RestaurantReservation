@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restaurant</title>
+    <link rel="stylesheet" th:href="@{/css/TablePage.css}">
+</head>
+<body>
+<header>
+    Logo / Restaurant name
+    <hr>
+</header>
+<main>
+    <p th:if="${param.error}" style="color:red;" th:text="${param.error}"></p>
+    Filter reservation
+    <form action="/confirmation" method="get">
+        <input type="hidden" name="scheduleId" th:value="${scheduleId}">
+        <input type="hidden" name="tableId" th:value="${selectedTableId}">
+        <label>
+            <select name="tableType">
+                <option value="">All</option>
+                <option th:each="type : ${tableTypes}"
+                        th:value="${type.id}"
+                        th:text="${type.name}">
+                </option>
+            </select>
+        </label>
+        <button type="submit">Confirm selection</button>
+    </form>
+    <!-- Claude helped with this info snippet-->
+    <form method="get" action="/tableplan">
+        <input type="hidden" name="scheduleId" th:value="${scheduleId}">
+        <div class="tableContainer">
+            <div class="tableInfo" th:if="${selectedTable != null}">
+                <h3>Table <span th:text="${selectedTable.tableNumber}"></span></h3>
+                <ul>
+                    <h3>Booked</h3>
+                    <li th:each="s : ${selectedTableSchedules}">
+                        <span th:text="${s.scheduleName}"></span><br/>
+                        from <span th:text="${s.startTime}"></span>
+                        until <span th:text="${s.endTime}"></span>
+                    </li>
+                </ul>
+            </div>
+        <div class="tablePlan">
+            <button type="submit" name="selectedTableId" value="1" id="one" class="smallTable tableOne"></button>
+            <button type="submit" name="selectedTableId" value="2" id="two" class="bigTable tableTwo"></button>
+            <button type="submit" name="selectedTableId" value="3" id="three" class="bigTable tableThree"></button>
+            <button type="submit" name="selectedTableId" value="4" id="four" class="smallTable tableFour"></button>
+            <button type="submit" name="selectedTableId" value="5" id="five" class="smallTable tableFive"></button>
+            <button type="submit" name="selectedTableId" value="6" id="six" class="smallTable tableSix"></button>
+            <button type="submit" name="selectedTableId" value="7" id="seven" class="smallTable tableSeven"></button>
+            <button type="submit" name="selectedTableId" value="8" id="eight" class="smallTable tableEight"></button>
+            <button type="submit" name="selectedTableId" value="9" id="nine" class="bigTable tableNine"></button>
+            <button type="submit" name="selectedTableId" value="10" id="ten" class="bigTable tableTen"></button>
+            <button type="submit" name="selectedTableId" value="11" id="eleven" class="bigTable tableEleven"></button>
+            <button type="submit" name="selectedTableId" value="12" id="twelve" class="bigTable tableTwelve"></button>
+        </div>
+    </div>
+    </form>
+</main>
+<footer>
+    <hr>
+    Contact / info
+</footer>
+</body>
+</html>

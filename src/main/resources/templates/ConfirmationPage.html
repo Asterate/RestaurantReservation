@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restaurant</title>
+</head>
+<body>
+<header>
+    <link rel="stylesheet" th:href="@{/css/ConfirmationPage.css}">
+    Logo / Restaurant name
+</header>
+<hr>
+<main>
+    <div class="confirm">
+        Reservation information
+        <div th:value="${s.starttime}">Start</div>
+        <div th:value="${s.endtime}">End</div>
+        <div th:value="${table.}">People count</div>
+        Guest first name
+        <label>
+            <input>
+        </label>
+        Guest last name
+        <label >
+            <input>
+        </label>
+        Guest phone number
+        <label>
+            <input>
+        </label>
+        <form action="/" method="get">
+            <button type="submit">Confirm</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <hr>
+    Contact / info
+</footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.confirm {
+    border: 1px solid black;
+    width: 250px;
+    height: 450px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
